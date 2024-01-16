@@ -24,6 +24,12 @@ public class App {
 		for (Cat cat : cats) {
 			cat.print();
 		}
+		// for each cat of cats
+		for (Cat cat : cats) {
+			cat.print();
+			cat.getAge();
+		}
+		moggy.setAge(moggy.getAge() + 1);
 	}
 
 }
