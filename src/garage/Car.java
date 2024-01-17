@@ -17,7 +17,7 @@ public class Car extends Vehicle {
 	}
 
 	public boolean hasBoot() {
-		return bigboot;
+		return boot;
 	}
 
 	public void setBoot(boolean boot) {
