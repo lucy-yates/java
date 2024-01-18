@@ -1,5 +1,7 @@
 package garage;
 
+import java.util.Objects;
+
 public class Vehicle {
 
 	private String colour;
@@ -47,6 +49,19 @@ public class Vehicle {
 
 	public void setSize(String size) {
 		this.size = size;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vehicle other = (Vehicle) obj;
+		return Objects.equals(brand, other.brand) && Objects.equals(colour, other.colour)
+				&& Objects.equals(size, other.size);
 	}
 
 }

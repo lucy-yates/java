@@ -16,6 +16,7 @@ public class App {
 		// henners.print();
 
 		Vehicle barbie = new Car("Pink", "Mattel", "Tiny", false);
+		Vehicle barbie2 = new Car("Pink", "Mattel", "Tiny", false);
 
 		Vehicle[] vehicles = { kelly, vulcan, iona, henners, barbie };
 		for (Vehicle vehicle : vehicles) {
@@ -27,13 +28,17 @@ public class App {
 		myGarage.park(new Plane("Yellow", "NATO", "Massive", true));
 		myGarage.park(new Boat());
 		myGarage.park(barbie);
+		myGarage.park(barbie2);
 		myGarage.park(kelly);
 		myGarage.park(iona);
 		myGarage.park(vulcan);
 		myGarage.park(henners);
-		myGarage.sell(vulcan);
+		// myGarage.print();
+		myGarage.sell(barbie2);
 
 		myGarage.print();
+		System.out.println(barbie.equals(barbie2));
+
 	}
 
 }
