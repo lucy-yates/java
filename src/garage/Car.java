@@ -25,10 +25,15 @@ public class Car extends Vehicle {
 	}
 
 	@Override
-	public void print() {
-		System.out.println("Colour: " + this.getColour());
-		System.out.println("Brand: " + this.getBrand());
-		System.out.println("Size: " + this.getSize());
-		System.out.println("Boot: " + this.boot);
+	public int calcBill() {
+		return 100;
 	}
+
+	// @Override
+	// public void print() {
+	// System.out.println("Colour: " + this.getColour());
+	// System.out.println("Brand: " + this.getBrand());
+	// System.out.println("Size: " + this.getSize());
+	// System.out.println("Boot: " + this.boot);
+	// }
 }

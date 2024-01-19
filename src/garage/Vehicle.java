@@ -2,7 +2,25 @@ package garage;
 
 import java.util.Objects;
 
-public class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle> {
+
+	// @Override
+	// public int compareTo(Vehicle o) {
+	// if (id < o.getId()) {
+	// return +1;
+	// }
+	// if (id > o.getId()) {
+	// return -1;
+	// } else {
+	// return 0;
+	// }
+	// }
+
+	@Override
+	public int compareTo(Vehicle o) {
+		return this.colour.compareTo(o.colour) * -1;
+
+	}
 
 	private String colour;
 
@@ -21,11 +39,18 @@ public class Vehicle {
 		this.size = size;
 	}
 
-	public void print() {
-		System.out.println("Colour: " + this.colour);
-		System.out.println("Brand: " + this.brand);
-		System.out.println("Size: " + this.size);
+	public abstract int calcBill();
+
+	@Override
+	public String toString() {
+		return "Vehicle [colour=" + colour + ", brand=" + brand + ", size=" + size + "]";
 	}
+
+	// public void print() {
+	// System.out.println("Colour: " + this.colour);
+	// System.out.println("Brand: " + this.brand);
+	// System.out.println("Size: " + this.size);
+	// }
 
 	public String getColour() {
 		return colour;

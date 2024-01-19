@@ -25,10 +25,15 @@ public class Boat extends Vehicle {
 	}
 
 	@Override
-	public void print() {
-		System.out.println("Colour: " + this.getColour());
-		System.out.println("Brand: " + this.getBrand());
-		System.out.println("Size: " + this.getSize());
-		System.out.println("Sinks?: " + this.sink);
+	public int calcBill() {
+		return 1000;
 	}
+
+	// @Override
+	// public void print() {
+	// System.out.println("Colour: " + this.getColour());
+	// System.out.println("Brand: " + this.getBrand());
+	// System.out.println("Size: " + this.getSize());
+	// System.out.println("Sinks?: " + this.sink);
+	// }
 }

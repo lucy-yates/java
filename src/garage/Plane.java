@@ -25,11 +25,16 @@ public class Plane extends Vehicle {
 	}
 
 	@Override
-	public void print() {
-		System.out.println("Colour: " + this.getColour());
-		System.out.println("Brand: " + this.getBrand());
-		System.out.println("Size: " + this.getSize());
-		System.out.println("Flys?: " + this.flys);
+	public int calcBill() {
+		return 10000;
 	}
+
+	// @Override
+	// public void print() {
+	// System.out.println("Colour: " + this.getColour());
+	// System.out.println("Brand: " + this.getBrand());
+	// System.out.println("Size: " + this.getSize());
+	// System.out.println("Flys?: " + this.flys);
+	// }
 
 }
