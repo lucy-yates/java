@@ -7,7 +7,7 @@ public class Magazine extends Item {
 		super();
 	}
 
-	public Magazine(String title, String author, String date, boolean educational) {
+	public Magazine(String title, String author, int date, boolean educational) {
 		super(title, author, date);
 		this.educational = educational;
 	}
@@ -20,11 +20,6 @@ public class Magazine extends Item {
 		this.educational = educational;
 	}
 
-	@Override
-	public int calcFee() {
-		return 100;
-	}
-
 	// @Override
 	// public void print() {
 	// System.out.println("Title: " + this.getTitle());
@@ -32,5 +27,10 @@ public class Magazine extends Item {
 	// System.out.println("Publication Date: " + this.getDate());
 	// System.out.println("Educational?: " + this.educational);
 	// }
+
+	@Override
+	public int calcFee() {
+		return 100;
+	}
 
 }

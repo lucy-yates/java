@@ -10,7 +10,7 @@ public class Library {
 		super();
 	}
 
-	public void checkIn(Item item) {
+	public void addLibrary(Item item) {
 		items.add(item);
 	}
 
@@ -18,9 +18,24 @@ public class Library {
 		items.remove(item);
 	}
 
-	@Override
-	public String toString() {
-		return "Library [items=" + items + "]";
+	public boolean checkInID(int Id) {
+		for (Item item : items) {
+			if (item.getId() == Id) {
+				return item.setCheckedIn(true);
+			}
+
+		}
+		return false;
+	}
+
+	public boolean checkOutID(int Id) {
+		for (Item item : items) {
+			if (item.getId() == Id) {
+				return item.setCheckedIn(false);
+			}
+
+		}
+		return true;
 	}
 
 	public void fee() {
@@ -30,5 +45,10 @@ public class Library {
 			sum = sum + item.calcFee();
 		}
 		System.out.println("All late fees: " + sum);
+	}
+
+	@Override
+	public String toString() {
+		return "Library [items=" + items + "]";
 	}
 }

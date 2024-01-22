@@ -7,7 +7,7 @@ public class Book extends Item {
 		super();
 	}
 
-	public Book(String title, String author, String date, boolean limitedEdition) {
+	public Book(String title, String author, int date, boolean limitedEdition) {
 		super(title, author, date);
 		this.limitedEdition = limitedEdition;
 	}
@@ -20,11 +20,6 @@ public class Book extends Item {
 		this.limitedEdition = limitedEdition;
 	}
 
-	@Override
-	public int calcFee() {
-		return 1000;
-	}
-
 	// @Override
 	// public void print() {
 	// System.out.println("Title: " + this.getTitle());
@@ -32,4 +27,9 @@ public class Book extends Item {
 	// System.out.println("Publication Date: " + this.getDate());
 	// System.out.println("Limited Edition?: " + this.limitedEdition);
 	// }
+
+	@Override
+	public int calcFee() {
+		return 1000;
+	}
 }

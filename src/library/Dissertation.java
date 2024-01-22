@@ -7,7 +7,7 @@ public class Dissertation extends Item {
 		super();
 	}
 
-	public Dissertation(String title, String author, String date, boolean awardWinning) {
+	public Dissertation(String title, String author, int date, boolean awardWinning) {
 		super(title, author, date);
 		this.awardWinning = awardWinning;
 	}
@@ -20,11 +20,6 @@ public class Dissertation extends Item {
 		this.awardWinning = awardWinning;
 	}
 
-	@Override
-	public int calcFee() {
-		return 10000;
-	}
-
 	// @Override
 	// public void print() {
 	// System.out.println("Title: " + this.getTitle());
@@ -32,4 +27,9 @@ public class Dissertation extends Item {
 	// System.out.println("Publication Date: " + this.getDate());
 	// System.out.println("Award Winning?: " + this.awardWinning);
 	// }
+
+	@Override
+	public int calcFee() {
+		return 10000;
+	}
 }
