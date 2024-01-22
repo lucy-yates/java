@@ -35,12 +35,12 @@ public abstract class Item implements Comparable<Item> {
 	// System.out.println("Publication Date: " + this.getDate());
 	// }
 
-	public boolean isCheckedIn() {
-		return checkedIn;
-	}
-
 	public int getId() {
 		return Id;
+	}
+
+	public boolean isCheckedIn() {
+		return checkedIn;
 	}
 
 	public boolean setCheckedIn(boolean checkedIn) {
